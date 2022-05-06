@@ -6,5 +6,6 @@ Steps:
 $ cd lab-map-reduce-filter-sort
 $ npm install
 $ npm run test:watch
-```bash
+```
+
 The test requirements (tests/map.spec.js, tests/filter.spec.js, tests/reduce.spec.js) will guide you in solving the remaining test requirements.
