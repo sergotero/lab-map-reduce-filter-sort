@@ -1,0 +1,29 @@
+{
+  "name": "lab-map-reduce-filter-sort",
+  "version": "0.1.0",
+  "description": "Map Reduce Filter & Sort ejs",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/IronPTSolutions/lab-map-reduce-filter-sort.git"
+  },
+  "keywords": [
+    "JS",
+    "Arrays",
+    "Map",
+    "Reduce",
+    "Fileter"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IronPTSolutions/lab-map-reduce-filter-sort/issues"
+  },
+  "homepage": "https://github.com/IronPTSolutions/lab-map-reduce-filter-sort#readme",
+  "dependencies": {
+    "jest": "^28.1.0"
+  }
+}
