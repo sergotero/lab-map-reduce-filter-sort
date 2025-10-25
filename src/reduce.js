@@ -117,7 +117,18 @@ function countByCategory(products) {
  * // "Anna, Carlos, Bea"
  */
 function joinNames(users) {
-
+   let counter = 0;
+   const result = users.reduce((finalString, user) => {
+      if (counter < users.length -1) {
+         finalString += user.name + ", ";
+      } else {
+         finalString += user.name;
+      }
+      counter++;
+      return finalString;
+   }, "");
+   
+   return result;
 }
 
 
