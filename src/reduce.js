@@ -22,19 +22,12 @@ function sum(numbers) {
  * @returns [{ name: 'Juanito', grade: 9 }]
  */
 function bestStudent(students) {
-   if (students.length === 0) {
-      return undefined;
-   } else {
-      let highestGrade = 0;
-      const bestOfAll = students.reduce((bestStudent, student) => {
-         if (student.grade > highestGrade) {
-            highestGrade = student.grade;
-            bestStudent = student;
-         }
-         return student;
-      }, 0);
-      return bestOfAll
-   }
+   return students.reduce((bestStudent, student) => {
+      if (!bestStudent || bestStudent.grade < student.grade) {
+         bestStudent = student;
+      }
+      return bestStudent;
+   }, undefined);
 }
 
 
@@ -55,7 +48,7 @@ function bestStudent(students) {
 function countWords(words) {
    
    const dictionary = words.reduce( (object, word) => {
-      if(word in object){
+      if (word in object) {
          object[word] += 1;
       } else {
          object[word] = 1;
