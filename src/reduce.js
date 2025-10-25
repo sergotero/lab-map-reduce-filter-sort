@@ -5,19 +5,19 @@
  * @returns [2, 4]
  */
 function sum(numbers) {
-  const amount = numbers.reduce((counter, number) => {
-   return counter += number;
-  }, 0);
-  return amount;
+   const amount = numbers.reduce((counter, number) => {
+      return counter += number;
+   }, 0);
+   return amount;
 }
 
 
 /**
  * Dado un array de estudiantes, devuelve el mejor
  * @param [
-    { name: 'Futanito', grade: 6 },
-    { name: 'Menganito', grade: 5 },
-    { name: 'Juanito', grade: 9 }
+   { name: 'Futanito', grade: 6 },
+   { name: 'Menganito', grade: 5 },
+   { name: 'Juanito', grade: 9 }
  * ] students
  * @returns [{ name: 'Juanito', grade: 9 }]
  */
@@ -27,7 +27,7 @@ function bestStudent(students) {
    } else {
       let highestGrade = 0;
       const bestOfAll = students.reduce((bestStudent, student) => {
-         if(student.grade > highestGrade){
+         if (student.grade > highestGrade) {
             highestGrade = student.grade;
             bestStudent = student;
          }
@@ -41,19 +41,28 @@ function bestStudent(students) {
 /**
  * Dado un array de palabras, devuelve un diccionario con el número de apariciones.
  * @param [
-    "dog", "cat", "dog", "cat", "fish", "man", "woman", "woman"
+   "dog", "cat", "dog", "cat", "fish", "man", "woman", "woman"
  * ] users
  * @param "JS" skill
  * @returns {
-    dog: 2,
-    cat: 2,
-    fish: 1,
-    man: 1,
-    woman: 2,
-  }
+   dog: 2,
+   cat: 2,
+   fish: 1,
+   man: 1,
+   woman: 2,
+   }  
  */
 function countWords(words) {
-  
+   
+   const dictionary = words.reduce( (object, word) => {
+      if(word in object){
+         object[word] += 1;
+      } else {
+         object[word] = 1;
+      }
+      return object;
+   }, {});
+   return dictionary;
 }
 
 /**
@@ -81,7 +90,7 @@ function getTotalPrice(products) {
  * // { Fruit: 2, Vegetable: 1 }
  */
 function countByCategory(products) {
-   
+
 }
 
 /**
@@ -100,10 +109,10 @@ function joinNames(users) {
 
 
 module.exports = {
-  sum,
-  bestStudent,
-  countWords,
-  getTotalPrice,
-  countByCategory,
-  joinNames,
+   sum,
+   bestStudent,
+   countWords,
+   getTotalPrice,
+   countByCategory,
+   joinNames,
 }
