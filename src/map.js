@@ -85,7 +85,7 @@ function sumEvenSubOdd(numbers) {
             { subject: 'History', grade: 10 },
             { subject: 'Literature', grade: 1 },
           ],
-           avg: 7
+            avg: 7
         },
         {
           name: 'Futanito',
@@ -99,7 +99,16 @@ function sumEvenSubOdd(numbers) {
     ]
  */
 function buildStudentsAvg(students) {
-  
+  const studentsWithAvg = students.map((student) => {
+    const marks = student.marks;
+    let total = 0;
+    for (let item of marks){
+      total += item.grade;
+    }
+    student.avg = (total/marks.length);
+    return student;
+  });
+  return studentsWithAvg;
 }
 
 /**
