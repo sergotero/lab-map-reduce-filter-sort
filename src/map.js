@@ -7,7 +7,19 @@
  * @returns [1, 2, 3, -1]
  */
 function parseNumbers(numbersAsString) {
-  
+  const result = numbersAsString.map((number) => {
+    if(number === undefined){
+      return -1;
+    } else {
+      const castedNumber = Number(number);
+      if(isNaN(castedNumber)){
+        return -1;
+      } else{
+        return castedNumber;
+      }
+    }
+  });
+  return result;
 }
 
 /**
