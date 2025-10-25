@@ -5,7 +5,10 @@
  * @returns [2, 4]
  */
 function sum(numbers) {
-  
+  const amount = numbers.reduce((counter, number) => {
+   return counter += number;
+  }, 0);
+  return amount;
 }
 
 
