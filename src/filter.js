@@ -5,7 +5,12 @@
  * @returns [2, 4]
  */
 function getEvens(numbers) {
-  
+  const evenNumbers = numbers.filter((number) => {
+    if(number % 2 === 0){
+      return number;
+    }
+  });
+  return evenNumbers;
 }
 
 
