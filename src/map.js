@@ -28,7 +28,14 @@ function parseNumbers(numbersAsString) {
  * @returns [0, 3, 2, 5]
  */
 function sumEvenSubOdd(numbers) {
-  
+  const evenNumbers = numbers.map((number) => {
+    if(number % 2 === 0){
+      return number + 1;
+    } else {
+      return number -1;
+    }
+  });
+  return evenNumbers;
 }
 
 /**
