@@ -1,4 +1,4 @@
-const { parseNumbers, sumEvenSubOdd, buildStudentsAvg } = require('../src/map');
+const { parseNumbers, sumEvenSubOdd, buildStudentsAvg, addTotalPrice } = require('../src/map');
 
 describe('Map functions', () => {
 

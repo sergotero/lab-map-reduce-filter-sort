@@ -1,4 +1,4 @@
-const { sum, bestStudent, countWords } = require('../src/reduce');
+const { sum, bestStudent, countWords, getTotalPrice, countByCategory, joinNames } = require('../src/reduce');
 
 describe('Reduce functions', () => {
 

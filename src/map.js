@@ -94,6 +94,7 @@ function buildStudentsAvg(students) {
  * // [{name: "Bread", price: 2, quantity: 3, total: 6}]
  */
 function addTotalPrice(products) {
+
 }
 
 
