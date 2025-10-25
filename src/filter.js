@@ -20,7 +20,12 @@ function getEvens(numbers) {
  * @returns [1, 2, false, "a"]
  */
 function clean(elements) {
-  
+  const cleanArray = elements.filter((element) => {
+    if(element !== undefined || element !== null){
+      return element;
+    }
+  });
+  return cleanArray;
 }
 
 
@@ -44,7 +49,14 @@ function clean(elements) {
  * @returns [1, 2, false, "a"]
  */
 function filterBySkill(users, skill) {
-  
+  const filteredUsers = users.filter((user) => {
+    for(let sk of user.skills){
+      if (sk === skill){
+        return user;
+      }
+    }
+  });
+  return filteredUsers;
 } 
 
 
