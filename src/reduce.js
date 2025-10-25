@@ -22,7 +22,19 @@ function sum(numbers) {
  * @returns [{ name: 'Juanito', grade: 9 }]
  */
 function bestStudent(students) {
-  
+   if (students.length === 0) {
+      return undefined;
+   } else {
+      let highestGrade = 0;
+      const bestOfAll = students.reduce((bestStudent, student) => {
+         if(student.grade > highestGrade){
+            highestGrade = student.grade;
+            bestStudent = student;
+         }
+         return student;
+      }, 0);
+      return bestOfAll
+   }
 }
 
 

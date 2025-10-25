@@ -8,15 +8,11 @@
  */
 function parseNumbers(numbersAsString) {
   const result = numbersAsString.map((number) => {
-    if(number === undefined){
+    const castedNumber = Number(number);
+    if (isNaN(castedNumber)) {
       return -1;
     } else {
-      const castedNumber = Number(number);
-      if(isNaN(castedNumber)){
-        return -1;
-      } else{
-        return castedNumber;
-      }
+      return castedNumber;
     }
   });
   return result;
@@ -29,7 +25,7 @@ function parseNumbers(numbersAsString) {
  */
 function sumEvenSubOdd(numbers) {
   const evenNumbers = numbers.map((number) => {
-    if(number % 2 === 0){
+    if (number % 2 === 0) {
       return number + 1;
     } else {
       return number -1;
@@ -102,10 +98,10 @@ function buildStudentsAvg(students) {
   const studentsWithAvg = students.map((student) => {
     const marks = student.marks;
     let total = 0;
-    for (let item of marks){
+    for (let item of marks) {
       total += item.grade;
     }
-    student.avg = (total/marks.length);
+    student.avg = (total / marks.length);
     return student;
   });
   return studentsWithAvg;

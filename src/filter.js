@@ -5,11 +5,7 @@
  * @returns [2, 4]
  */
 function getEvens(numbers) {
-  const evenNumbers = numbers.filter((number) => {
-    if(number % 2 === 0){
-      return number;
-    }
-  });
+  const evenNumbers = numbers.filter((number) => number % 2 === 0);
   return evenNumbers;
 }
 
@@ -20,11 +16,7 @@ function getEvens(numbers) {
  * @returns [1, 2, false, "a"]
  */
 function clean(elements) {
-  const cleanArray = elements.filter((element) => {
-    if(element !== undefined || element !== null){
-      return element;
-    }
-  });
+  const cleanArray = elements.filter((element) => element !== undefined || element !== null);
   return cleanArray;
 }
 
@@ -49,13 +41,7 @@ function clean(elements) {
  * @returns [1, 2, false, "a"]
  */
 function filterBySkill(users, skill) {
-  const filteredUsers = users.filter((user) => {
-    for(let sk of user.skills){
-      if (sk === skill){
-        return user;
-      }
-    }
-  });
+  const filteredUsers = users.filter((user) => user.skills.includes(skill));
   return filteredUsers;
 } 
 
