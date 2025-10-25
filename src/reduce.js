@@ -76,7 +76,11 @@ function countWords(words) {
  * // 6
  */
 function getTotalPrice(products) {
-
+   const totalAmount = products.reduce((total, product) => {
+      total += product.price;
+      return total;
+   }, 0);
+   return totalAmount;
 }
 
 /**
