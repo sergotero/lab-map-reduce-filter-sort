@@ -60,9 +60,62 @@ describe('Reduce functions', () => {
         fish: 1,
         man: 1,
         woman: 2,
-      }
-      ;
+      };
       expect(countWords(words)).toStrictEqual(expected);
+    });
+
+  });
+
+  describe('getTotalPrice', () => {
+
+    it('should be an function', () => {
+      expect(getTotalPrice instanceof Function).toBeTruthy();
+    });
+
+    it('should return 0 if empty', () => {
+      expect(getTotalPrice([])).toStrictEqual(0);
+    });
+
+    it('should return total products price', () => {
+      const products = [{ name: "Apple", price: 2 }, { name: "Bread", price: 1 }, { name: "Milk", price: 3 }];
+      const expected = 6;
+      expect(getTotalPrice(products)).toStrictEqual(expected);
+    });
+
+  });
+
+  describe('countByCategory', () => {
+
+    it('should be an function', () => {
+      expect(countByCategory instanceof Function).toBeTruthy();
+    });
+
+    it('should return empty object if empty', () => {
+      expect(countByCategory([])).toStrictEqual({});
+    });
+
+    it('should return total products price', () => {
+      const products = [{ name: "Apple", category: "Fruit" }, { name: "Banana", category: "Fruit" }, { name: "Lettuce", category: "Vegetable" }];
+      const expected = { Fruit: 2, Vegetable: 1 };
+      expect(countByCategory(products)).toStrictEqual(expected);
+    });
+
+  });
+
+  describe('joinNames', () => {
+
+    it('should be an function', () => {
+      expect(joinNames instanceof Function).toBeTruthy();
+    });
+
+    it('should return empty string if empty', () => {
+      expect(joinNames([])).toStrictEqual('');
+    });
+
+    it('should return total products price', () => {
+      const users = [{ name: "Anna" }, { name: "Carlos" }, { name: "Bea" }];
+      const expected = "Anna, Carlos, Bea";
+      expect(joinNames(users)).toStrictEqual(expected);
     });
 
   });

@@ -39,11 +39,56 @@ function bestStudent(students) {
  */
 function countWords(words) {
   
-} 
+}
+
+/**
+ * Suma los precios de todos los productos en el array.
+ * @param {Array<{name: string, price: number}>} products - Lista de productos con su precio.
+ * @returns {number} Total de precios sumados.
+ * @example
+ * // Input:
+ * // [{name: "Apple", price: 2}, {name: "Bread", price: 1}, {name: "Milk", price: 3}]
+ * // Output:
+ * // 6
+ */
+function getTotalPrice(products) {
+
+}
+
+/**
+ * Cuenta cuántos productos hay por categoría.
+ * @param {Array<{name: string, category: string}>} products - Lista de productos con categoría.
+ * @returns {Object} Objeto con el conteo por categoría.
+ * @example
+ * // Input:
+ * // [{name: "Apple", category: "Fruit"}, {name: "Banana", category: "Fruit"}, {name: "Lettuce", category: "Vegetable"}]
+ * // Output:
+ * // { Fruit: 2, Vegetable: 1 }
+ */
+function countByCategory(products) {
+   
+}
+
+/**
+ * Concatena los nombres en una sola cadena separada por comas.
+ * @param {Array<{name: string}>} users - Lista de usuarios.
+ * @returns {string} Cadena con todos los nombres.
+ * @example
+ * // Input:
+ * // [{name: "Anna"}, {name: "Carlos"}, {name: "Bea"}]
+ * // Output:
+ * // "Anna, Carlos, Bea"
+ */
+function joinNames(users) {
+
+}
 
 
 module.exports = {
   sum,
   bestStudent,
-  countWords
+  countWords,
+  getTotalPrice,
+  countByCategory,
+  joinNames,
 }

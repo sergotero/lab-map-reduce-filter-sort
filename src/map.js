@@ -83,9 +83,23 @@ function buildStudentsAvg(students) {
   
 }
 
+/**
+ * Agrega un campo 'total' multiplicando precio * cantidad.
+ * @param {Array<{name: string, price: number, quantity: number}>} items - Lista de productos.
+ * @returns {Array<{name: string, price: number, quantity: number, total: number}>} Lista con campo total agregado.
+ * @example
+ * // Input:
+ * // [{name: "Bread", price: 2, quantity: 3}]
+ * // Output:
+ * // [{name: "Bread", price: 2, quantity: 3, total: 6}]
+ */
+function addTotalPrice(products) {
+}
+
 
 module.exports = {
   parseNumbers,
   sumEvenSubOdd,
-  buildStudentsAvg
+  buildStudentsAvg,
+  addTotalPrice
 }

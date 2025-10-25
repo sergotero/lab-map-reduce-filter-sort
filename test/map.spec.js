@@ -116,4 +116,23 @@ describe('Map functions', () => {
   });
 
 
+  describe('addTotalPrice', () => {
+
+    it('should be an function', () => {
+      expect(addTotalPrice instanceof Function).toBeTruthy();
+    });
+
+    it('should not return undefined', () => {
+      expect(addTotalPrice([])).not.toBe(undefined);
+    });
+
+    it('should add total price by product', () => {
+      const products = [{ name: "Bread", price: 2, quantity: 3 }, { name: "Carrots", price: 5, quantity: 2 }];
+      const expected = [{ name: "Bread", price: 2, quantity: 3, total: 6 }, { name: "Carrots", price: 5, quantity: 2, total: 10 }];
+      expect(addTotalPrice(products)).toStrictEqual(expected);
+    });
+
+  });
+
+
 });
