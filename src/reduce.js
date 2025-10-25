@@ -94,7 +94,16 @@ function getTotalPrice(products) {
  * // { Fruit: 2, Vegetable: 1 }
  */
 function countByCategory(products) {
+   const amount = products.reduce((object, product) => {
+      if (product.category in object) {
+         object[product.category] += 1; 
+      } else {
+         object[product.category] = 1;
+      }
+      return object;
+   }, {});
 
+   return amount;
 }
 
 /**
